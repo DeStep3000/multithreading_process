@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "E:/clion/multithreading_process1/cmake-build-debug/_deps/opencv-subbuild/CMakeFiles/opencv-populate"
+		},
+		{
+			"file" : "E:/clion/multithreading_process1/cmake-build-debug/_deps/opencv-subbuild/CMakeFiles/opencv-populate.rule"
+		},
+		{
+			"file" : "E:/clion/multithreading_process1/cmake-build-debug/_deps/opencv-subbuild/CMakeFiles/opencv-populate-complete.rule"
+		},
+		{
+			"file" : "E:/clion/multithreading_process1/cmake-build-debug/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-build.rule"
+		},
+		{
+			"file" : "E:/clion/multithreading_process1/cmake-build-debug/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-configure.rule"
+		},
+		{
+			"file" : "E:/clion/multithreading_process1/cmake-build-debug/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-download.rule"
+		},
+		{
+			"file" : "E:/clion/multithreading_process1/cmake-build-debug/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-install.rule"
+		},
+		{
+			"file" : "E:/clion/multithreading_process1/cmake-build-debug/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-mkdir.rule"
+		},
+		{
+			"file" : "E:/clion/multithreading_process1/cmake-build-debug/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-patch.rule"
+		},
+		{
+			"file" : "E:/clion/multithreading_process1/cmake-build-debug/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-test.rule"
+		},
+		{
+			"file" : "E:/clion/multithreading_process1/cmake-build-debug/_deps/opencv-subbuild/opencv-populate-prefix/src/opencv-populate-stamp/opencv-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"opencv-populate"
+		],
+		"name" : "opencv-populate"
+	}
+}
