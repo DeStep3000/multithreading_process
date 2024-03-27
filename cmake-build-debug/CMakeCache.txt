@@ -157,7 +157,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=VisionC
+CMAKE_PROJECT_NAME:STATIC=multithreading
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/ranlib.exe
@@ -276,6 +276,15 @@ VisionC_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 VisionC_SOURCE_DIR:STATIC=C:/DeStep/HSE/C++/multithreading
+
+//Value Computed by CMake
+multithreading_BINARY_DIR:STATIC=C:/DeStep/HSE/C++/multithreading/cmake-build-debug
+
+//Value Computed by CMake
+multithreading_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+multithreading_SOURCE_DIR:STATIC=C:/DeStep/HSE/C++/multithreading
 
 
 ########################

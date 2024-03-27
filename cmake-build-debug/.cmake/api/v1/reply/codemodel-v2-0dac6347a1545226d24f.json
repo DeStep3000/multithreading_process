@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "VisionC",
+					"name" : "multithreading",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "VisionC::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-VisionC-Debug-2dbfd580dd750a2a5721.json",
-					"name" : "VisionC",
+					"id" : "multithreading::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-multithreading-Debug-db9036de472cc2dc76e7.json",
+					"name" : "multithreading",
 					"projectIndex" : 0
 				}
 			]
