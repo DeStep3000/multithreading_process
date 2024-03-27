@@ -5,6 +5,8 @@
 #include "stb_image.h"
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "stb_image_write.h"
+#include <thread>
+#include <vector>
 
 // черно-белое PNG изображение (цветное будет загружено как черно белое)
 struct STB_png_mono_image
@@ -50,6 +52,14 @@ private:
     int m_comp;
     unsigned char* m_data;
 };
+unsigned char data[1000*1000*3];
+
+void thread_func (const unsigned char* img_data, int start, int end){
+    for (int i=start; i < end; i++){
+        //std::cout << img.data()[i] << std::endl;
+        data[i] = 255 - img_data[i];
+    }
+}
 
 int main()
 {
@@ -59,10 +69,15 @@ int main()
         int w = img.width();
         int h = img.height();
         int c = img.comp();
-        unsigned char data[w*h*c];
-        for (int i; i < w*h*c; i++){
-            //std::cout << img.data()[i] << std::endl;
-            data[i] = 255 - img.data()[i];
+        int num_threads = std::thread::hardware_concurrency();
+        std::vector<std::thread> ths;
+        for (int i=0; i < num_threads; i++){
+            std::cout << "Thread number " << i << " is started" << std::endl;
+            ths.push_back(std::thread(thread_func, img.data(), i* w*h*c / num_threads, (i+1)* w*h*c / num_threads));
+        }
+        for (int i=0; i < num_threads; i++){
+            std::cout << "Thread number " << i << " is ended" << std::endl;
+            ths[i].join();
         }
         stbi_write_png("C:\\Users\\dabho\\CLionProjects\\multithreading_process\\eagle_2.png", img.width(), img.height(), img.comp(), data, 0);
     }
