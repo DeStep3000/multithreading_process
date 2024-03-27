@@ -1,0 +1,41 @@
+# Target labels
+ Main
+ opencv_highgui
+ Module
+# Source files and their labels
+C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/highgui/include/opencv2/highgui.hpp
+ Main
+ opencv_highgui
+ Module
+C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/highgui/include/opencv2/highgui/highgui.hpp
+ Main
+ opencv_highgui
+ Module
+C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/highgui/include/opencv2/highgui/highgui_c.h
+ Main
+ opencv_highgui
+ Module
+C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/highgui/src/backend.cpp
+ Main
+ opencv_highgui
+ Module
+C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/highgui/src/window.cpp
+ Main
+ opencv_highgui
+ Module
+C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/highgui/src/roiSelector.cpp
+ Main
+ opencv_highgui
+ Module
+C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/highgui/src/window_w32.cpp
+ Main
+ opencv_highgui
+ Module
+C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/highgui/src/precomp.hpp
+ Main
+ opencv_highgui
+ Module
+C:/DeStep/HSE/C++/multithreading/cmake-build-debug/cvconfig.h
+C:/DeStep/HSE/C++/multithreading/cmake-build-debug/opencv2/opencv_modules.hpp
+C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-build/modules/highgui/vs_version.rc
+C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-build/modules/highgui/opencv_highgui_main.cpp

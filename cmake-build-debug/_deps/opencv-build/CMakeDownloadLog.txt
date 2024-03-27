@@ -1,0 +1,5 @@
+#use_cache "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/.cache"
+#match_hash_in_cmake_cache "OCV_DOWNLOAD_ADE_HASH__deps_opencv_build_3rdparty_ade_v0_1_1f_zip"
+#match_hash_in_cmake_cache "OCV_DOWNLOAD_FFMPEG_HASH__deps_opencv_build_3rdparty_ffmpeg_opencv_videoio_ffmpeg_dll"
+#match_hash_in_cmake_cache "OCV_DOWNLOAD_FFMPEG_HASH__deps_opencv_build_3rdparty_ffmpeg_opencv_videoio_ffmpeg_64_dll"
+#match_hash_in_cmake_cache "OCV_DOWNLOAD_FFMPEG_HASH__deps_opencv_build_3rdparty_ffmpeg_ffmpeg_version_cmake"

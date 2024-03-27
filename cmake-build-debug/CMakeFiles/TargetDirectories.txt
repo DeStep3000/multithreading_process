@@ -1,0 +1,5 @@
+C:/DeStep/HSE/C++/multithreading/cmake-build-debug/CMakeFiles/VisionC.dir
+C:/DeStep/HSE/C++/multithreading/cmake-build-debug/CMakeFiles/package.dir
+C:/DeStep/HSE/C++/multithreading/cmake-build-debug/CMakeFiles/package_source.dir
+C:/DeStep/HSE/C++/multithreading/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/DeStep/HSE/C++/multithreading/cmake-build-debug/CMakeFiles/rebuild_cache.dir

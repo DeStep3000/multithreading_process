@@ -71,7 +71,7 @@ void invertColors(vector<Pixel>& pixels, int startIdx, int endIdx) {
 
 int main() {
     int width, height;
-    vector<Pixel> pixels = readImage("E:\\clion\\threads_pic\\input.bmp", width, height);
+    vector<Pixel> pixels = readImage("C:\\DeStep\\HSE\\C++\\multithreading\\input.bmp", width, height);
 
     int quarter = height / 4;
 
@@ -87,7 +87,7 @@ int main() {
         t.join();
     }
 
-    ofstream outputFile("E:\\clion\\threads_pic\\output_image.bmp", ios::binary);
+    ofstream outputFile("C:\\DeStep\\HSE\\C++\\multithreading", ios::binary);
     if (!outputFile.is_open()) {
         cerr << "Не удалось открыть файл для записи." << endl;
         exit(1);

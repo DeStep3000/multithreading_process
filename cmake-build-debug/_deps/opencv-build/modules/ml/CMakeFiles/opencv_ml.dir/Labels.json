@@ -1,0 +1,207 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/ml/include/opencv2/ml.hpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_ml",
+				"Module"
+			]
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/ml/include/opencv2/ml/ml.hpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_ml",
+				"Module"
+			]
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/ml/include/opencv2/ml/ml.inl.hpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_ml",
+				"Module"
+			]
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/ml/src/ann_mlp.cpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_ml",
+				"Module"
+			]
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/ml/src/boost.cpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_ml",
+				"Module"
+			]
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/ml/src/data.cpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_ml",
+				"Module"
+			]
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/ml/src/em.cpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_ml",
+				"Module"
+			]
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/ml/src/gbt.cpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_ml",
+				"Module"
+			]
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/ml/src/inner_functions.cpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_ml",
+				"Module"
+			]
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/ml/src/kdtree.cpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_ml",
+				"Module"
+			]
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/ml/src/knearest.cpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_ml",
+				"Module"
+			]
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/ml/src/lr.cpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_ml",
+				"Module"
+			]
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/ml/src/nbayes.cpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_ml",
+				"Module"
+			]
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/ml/src/rtrees.cpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_ml",
+				"Module"
+			]
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/ml/src/svm.cpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_ml",
+				"Module"
+			]
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/ml/src/svmsgd.cpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_ml",
+				"Module"
+			]
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/ml/src/testset.cpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_ml",
+				"Module"
+			]
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/ml/src/tree.cpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_ml",
+				"Module"
+			]
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/ml/src/kdtree.hpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_ml",
+				"Module"
+			]
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-src/modules/ml/src/precomp.hpp",
+			"labels" : 
+			[
+				"Main",
+				"opencv_ml",
+				"Module"
+			]
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/cvconfig.h"
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/opencv2/opencv_modules.hpp"
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-build/modules/ml/vs_version.rc"
+		},
+		{
+			"file" : "C:/DeStep/HSE/C++/multithreading/cmake-build-debug/_deps/opencv-build/modules/ml/opencv_ml_main.cpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Main",
+			"opencv_ml",
+			"Module"
+		],
+		"name" : "opencv_ml"
+	}
+}
