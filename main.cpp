@@ -17,7 +17,7 @@ struct STB_png_mono_image
         // освобождаем  ресурсы
         free_();
         // пытаемся загрузить картинку
-        m_data = stbi_load(fname, &m_width, &m_height, &m_comp, 0);
+        m_data = stbi_load(fname, &m_width, &m_height, &m_comp, 3);
         if (!m_data)
         {   // сообщаем, что пошло не так
             std::cerr << stbi_failure_reason() << '\n';
@@ -28,7 +28,7 @@ struct STB_png_mono_image
     // геттеры
     int width() const { return m_width; }
     int height() const { return m_height; }
-    int comp() const { return m_comp; }
+    int comp() const { return 3; }
     const unsigned char* data() const { return m_data; }
 
 private:
@@ -50,11 +50,11 @@ private:
     int m_comp;
     unsigned char* m_data;
 };
-unsigned char data[1000*1000*3];
+unsigned char data[10000*10000*3];
 
-void thread_func (const unsigned char* img_data, int start, int end){
-    for (int i=start; i < end; i++){
-        //std::cout << img.data()[i] << std::endl;
+void thread_func (const unsigned char* img_data, unsigned long int start, unsigned long int end){
+    for (unsigned long int i=start; i < end; i++){
+        //std::cout << img_data[i] << std::endl;
         data[i] = 255 - img_data[i];
     }
 }
@@ -62,7 +62,7 @@ void thread_func (const unsigned char* img_data, int start, int end){
 int main()
 {
     STB_png_mono_image img;
-    if (img.load_from_file("Images\\eagle.png"))
+    if (img.load_from_file("Images\\abstraction.png"))
     {
         int w = img.width();
         int h = img.height();
@@ -77,7 +77,7 @@ int main()
             std::cout << "Thread number " << i << " is ended" << std::endl;
             ths[i].join();
         }
-        stbi_write_png("Images\\eagle_result.png", img.width(), img.height(), img.comp(), data, 0);
+        stbi_write_png("Images\\result.png", img.width(), img.height(), img.comp(), data, 0);
     }
     return 0;
 }
