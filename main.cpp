@@ -21,8 +21,9 @@ struct STB_png_mono_image {
         // освобождаем  ресурсы
         free_();
         // пытаемся загрузить картинку
-        m_data = stbi_load(fname, &m_width, &m_height, &m_comp, 3);
-        if (!m_data) {   // сообщаем, что пошло не так
+        m_data = stbi_load(fname, &m_width, &m_height, &m_comp, 0);
+        if (!m_data)
+        {   // сообщаем, что пошло не так
             std::cerr << stbi_failure_reason() << '\n';
             return false;
         }
@@ -33,11 +34,8 @@ struct STB_png_mono_image {
     int width() const { return m_width; }
 
     int height() const { return m_height; }
-
-    int comp() const { return 3; }
-
-    const unsigned char *data() const { return m_data; }
-
+    int comp() const { return m_comp; }
+    const unsigned char* data() const { return m_data; }
 private:
 
     void free_() {
@@ -56,27 +54,37 @@ private:
     unsigned char *m_data;
 };
 
-unsigned char data[10000 * 10000 * 3];
-
-void thread_func(const unsigned char *img_data, unsigned long int start, unsigned long int end) {
-    for (unsigned long int i = start; i < end; i++) {
-        //std::cout << img_data[i] << std::endl;
-        data[i] = 255 - img_data[i];
+void thread_func (const unsigned char* img_data, unsigned long int start, unsigned long int end, const int comp){
+    if(comp == 4){
+        for (unsigned long int i=start; i < end; i++){
+            //std::cout << img_data[i] << std::endl;
+            if(i % 4 == 3){
+                data[i] = img_data[i];
+            } else{
+                data[i] = 255 - img_data[i];
+            }
+        }
+    } else{
+        for (unsigned long int i=start; i < end; i++){
+            //std::cout << img_data[i] << std::endl;
+            data[i] = 255 - img_data[i];
+            }
     }
 }
 
 int main() {
     STB_png_mono_image img;
-    if (img.load_from_file("Images\\abstraction.png")) {
+    if (img.load_from_file("Images\\Homer.png"))
+    {
         int w = img.width();
         int h = img.height();
         int c = img.comp();
+        std::cout << c << std::endl;
         unsigned int num_threads = std::thread::hardware_concurrency();
         std::vector<std::thread> ths;
         for (int i = 0; i < num_threads; i++) {
             std::cout << "Thread number " << i << " is started" << std::endl;
-            ths.push_back(std::thread(thread_func, img.data(), i * w * h * c / num_threads,
-                                      (i + 1) * w * h * c / num_threads));
+            ths.push_back(std::thread(thread_func, img.data(), i* w*h*c / num_threads, (i+1)* w*h*c / num_threads, c));
         }
         for (int i = 0; i < num_threads; i++) {
             std::cout << "Thread number " << i << " is ended" << std::endl;
