@@ -52,14 +52,21 @@ private:
 };
 unsigned char data[10000*10000*3];
 
-void thread_func (const unsigned char* img_data, unsigned long int start, unsigned long int end){
-    for (unsigned long int i=start; i < end; i++){
-        //std::cout << img_data[i] << std::endl;
-        if(i % 4 == 3){
-            data[i] = img_data[i];
-        } else{
-            data[i] = 255 - img_data[i];
+void thread_func (const unsigned char* img_data, unsigned long int start, unsigned long int end, const int comp){
+    if(comp == 4){
+        for (unsigned long int i=start; i < end; i++){
+            //std::cout << img_data[i] << std::endl;
+            if(i % 4 == 3){
+                data[i] = img_data[i];
+            } else{
+                data[i] = 255 - img_data[i];
+            }
         }
+    } else{
+        for (unsigned long int i=start; i < end; i++){
+            //std::cout << img_data[i] << std::endl;
+            data[i] = 255 - img_data[i];
+            }
     }
 }
 
@@ -76,7 +83,7 @@ int main()
         std::vector<std::thread> ths;
         for (int i=0; i < num_threads; i++){
             std::cout << "Thread number " << i << " is started" << std::endl;
-            ths.push_back(std::thread(thread_func, img.data(), i* w*h*c / num_threads, (i+1)* w*h*c / num_threads));
+            ths.push_back(std::thread(thread_func, img.data(), i* w*h*c / num_threads, (i+1)* w*h*c / num_threads, c));
         }
         for (int i=0; i < num_threads; i++){
             std::cout << "Thread number " << i << " is ended" << std::endl;
