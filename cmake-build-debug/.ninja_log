@@ -1,6 +1,6 @@
 # ninja log v5
-0	1808	7332421073682739	CMakeFiles/multithreading.dir/main.cpp.obj	571d8cd1c5920e05
-1811	1966	7332421075229202	multithreading.exe	1d5267a41cc68d
+14	2208	7345222258584956	CMakeFiles/multithreading.dir/main.cpp.obj	571d8cd1c5920e05
+2209	2436	7345222260839416	multithreading.exe	b2cd35e7be420a53
 1500	1655	7332414431302985	VisionC.exe	b42e88b2b5c88e3e
-9	2041	7344800337351574	CMakeFiles/multithreading.dir/main.cpp.obj	571d8cd1c5920e05
-2042	2203	7344800338940293	multithreading.exe	b2cd35e7be420a53
+12	7088	7345226713564216	CMakeFiles/multithreading.dir/main.cpp.obj	b0f40546709fc
+7092	7540	7345226718040704	multithreading.exe	388661918068479b
