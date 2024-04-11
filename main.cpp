@@ -4,6 +4,7 @@
 #define STBI_ONLY_PNG   // только для PNG
 
 #include "stb_image.h"
+#include <time.h>
 
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 
@@ -81,16 +82,18 @@ void thread_func(const unsigned char *img_data, unsigned long int start, unsigne
 
 int main() {
     wxApp app;
-    wxFileDialog openFileDialog(NULL, _("Open PNG file"), "", "", "PNG files (*.png)|*.png", wxFD_OPEN | wxFD_FILE_MUST_EXIST);
+    wxFileDialog openFileDialog(NULL, _("Open PNG file"), "", "", "PNG files (*.png)|*.png",
+                                wxFD_OPEN | wxFD_FILE_MUST_EXIST);
 
     if (openFileDialog.ShowModal() == wxID_CANCEL)
         return 1; // Если пользователь отменил выбор файла, завершаем программу
 
     wxString filePath = openFileDialog.GetPath();
-    const char* filename = static_cast<const char*>(filePath.mb_str());
+    const char *filename = static_cast<const char *>(filePath.mb_str());
 
     STB_png_mono_image img;
     if (img.load_from_file(filename)) {
+        clock_t start = clock();
         int w = img.width();
         int h = img.height();
         int c = img.comp();
@@ -107,7 +110,10 @@ int main() {
             std::cout << "Thread number " << i << " is ended" << std::endl;
             ths[i].join();
         }
+        clock_t end = clock();
         stbi_write_png("Images\\result.png", img.width(), img.height(), img.comp(), data, 0);
+        double seconds = (double)(end - start) / CLOCKS_PER_SEC;
+        std::cout << "Time work prog: " << seconds << std::endl;
     }
     return 0;
 }
