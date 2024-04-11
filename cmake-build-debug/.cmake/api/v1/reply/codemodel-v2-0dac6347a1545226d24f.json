@@ -9,7 +9,7 @@
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.27"
+						"string" : "3.17"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "multithreading::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-multithreading-Debug-01389244c665c162d6c7.json",
+					"jsonFile" : "target-multithreading-Debug-db9036de472cc2dc76e7.json",
 					"name" : "multithreading",
 					"projectIndex" : 0
 				}

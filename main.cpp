@@ -1,19 +1,23 @@
 #include <iostream>
+
 #define STB_IMAGE_IMPLEMENTATION    // включаем реализацию
 #define STBI_ONLY_PNG   // только для PNG
+
 #include "stb_image.h"
+
 #define STB_IMAGE_WRITE_IMPLEMENTATION
+
 #include "stb_image_write.h"
 #include <thread>
 #include <vector>
 
-struct STB_png_mono_image
-{
+struct STB_png_mono_image {
     STB_png_mono_image() : m_width(), m_height(), m_comp(), m_data() {}
+
     ~STB_png_mono_image() { free_(); }
+
     // загрузка из файла
-    bool load_from_file(const char* fname)
-    {
+    bool load_from_file(const char *fname) {
         // освобождаем  ресурсы
         free_();
         // пытаемся загрузить картинку
@@ -25,18 +29,17 @@ struct STB_png_mono_image
         }
         return true;
     }
+
     // геттеры
     int width() const { return m_width; }
+
     int height() const { return m_height; }
     int comp() const { return m_comp; }
     const unsigned char* data() const { return m_data; }
-
 private:
 
-    void free_()
-    {
-        if (m_data)
-        {
+    void free_() {
+        if (m_data) {
             stbi_image_free(m_data);
             m_data = nullptr;
             m_width = 0;
@@ -48,9 +51,8 @@ private:
     int m_width;
     int m_height;
     int m_comp;
-    unsigned char* m_data;
+    unsigned char *m_data;
 };
-unsigned char data[10000*10000*3];
 
 void thread_func (const unsigned char* img_data, unsigned long int start, unsigned long int end, const int comp){
     if(comp == 4){
@@ -70,8 +72,7 @@ void thread_func (const unsigned char* img_data, unsigned long int start, unsign
     }
 }
 
-int main()
-{
+int main() {
     STB_png_mono_image img;
     if (img.load_from_file("Images\\Homer.png"))
     {
@@ -81,11 +82,11 @@ int main()
         std::cout << c << std::endl;
         unsigned int num_threads = std::thread::hardware_concurrency();
         std::vector<std::thread> ths;
-        for (int i=0; i < num_threads; i++){
+        for (int i = 0; i < num_threads; i++) {
             std::cout << "Thread number " << i << " is started" << std::endl;
             ths.push_back(std::thread(thread_func, img.data(), i* w*h*c / num_threads, (i+1)* w*h*c / num_threads, c));
         }
-        for (int i=0; i < num_threads; i++){
+        for (int i = 0; i < num_threads; i++) {
             std::cout << "Thread number " << i << " is ended" << std::endl;
             ths[i].join();
         }
