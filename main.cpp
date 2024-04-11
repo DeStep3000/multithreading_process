@@ -98,7 +98,7 @@ int main() {
         int h = img.height();
         int c = img.comp();
         std::cout << c << std::endl;
-        unsigned int num_threads = std::thread::hardware_concurrency();
+        unsigned int num_threads = 1;
         std::vector<std::thread> ths;
         for (int i = 0; i < num_threads; i++) {
             std::cout << "Thread number " << i << " is started" << std::endl;
